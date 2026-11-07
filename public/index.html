@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>foldspeak</title>
+    <meta
+      name="description"
+      content="An AI guide to any protein on Earth — structure, function, and what breaks it, in plain English."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" data-nav="home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M6 22c4-10 8 4 12-6s6-8 8-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+          <circle cx="6" cy="22" r="3" fill="currentColor" />
+          <circle cx="26" cy="10" r="3" fill="currentColor" />
+        </svg>
+        <span>foldspeak</span>
+      </a>
+      <form class="search search-compact" role="search" data-search hidden>
+        <label class="visually-hidden" for="q-compact">Search proteins</label>
+        <input id="q-compact" name="q" type="search" placeholder="Search a protein, gene, or accession" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero">
+        <h1>An AI guide to any protein on Earth</h1>
+        <p class="lede">Structure, function, and what breaks it — in plain English, grounded in the public databases.</p>
+        <form class="search" role="search" data-search>
+          <label class="visually-hidden" for="q">Search proteins</label>
+          <input id="q" name="q" type="search" placeholder="Try GFP, insulin, TP53, or P69905" autocomplete="off" />
+          <button type="submit">Search</button>
+        </form>
+        <div class="showcase">
+          <p class="showcase-label">Or start with one of these</p>
+          <ul id="showcase" class="chips" aria-label="Showcase proteins"></ul>
+          <button type="button" id="surprise" class="link-button">Surprise me</button>
+        </div>
+      </section>
+
+      <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+
+      <section id="results" class="results" hidden aria-labelledby="results-title">
+        <h2 id="results-title">Results</h2>
+        <ol id="results-list" class="results-list"></ol>
+      </section>
+
+      <article id="protein" class="protein" hidden aria-labelledby="protein-name">
+        <header class="protein-header">
+          <p class="eyebrow" id="protein-eyebrow"></p>
+          <h2 id="protein-name"></h2>
+          <p class="protein-meta" id="protein-meta"></p>
+        </header>
+
+        <div class="protein-grid">
+          <div class="col col-structure">
+            <section aria-labelledby="structure-title" class="card">
+              <div class="card-head">
+                <h3 id="structure-title">Structure</h3>
+                <span class="hint" id="structure-hint"></span>
+              </div>
+              <div id="viewer" class="viewer" data-state="idle" data-highlight="">
+                <div class="viewer-host" id="viewer-host"></div>
+                <div class="viewer-overlay" id="viewer-overlay"></div>
+              </div>
+              <ul class="plddt-legend" aria-label="Model confidence (pLDDT)">
+                <li><i class="sw sw-vh"></i>Very high &gt;90</li>
+                <li><i class="sw sw-c"></i>Confident 70–90</li>
+                <li><i class="sw sw-l"></i>Low 50–70</li>
+                <li><i class="sw sw-vl"></i>Very low &lt;50</li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="regions-title" class="card">
+              <div class="card-head">
+                <h3 id="regions-title">Functional regions</h3>
+                <button type="button" class="link-button" id="clear-highlight" hidden>Clear highlight</button>
+              </div>
+              <div class="track" id="track" aria-hidden="true"></div>
+              <p class="hint">Select a region to highlight it on the structure.</p>
+              <div id="regions"></div>
+            </section>
+          </div>
+
+          <div class="col col-text">
+            <div id="budget-banner" class="banner" role="alert" hidden></div>
+
+            <section aria-labelledby="narration-title" class="card narration-card">
+              <div class="card-head">
+                <h3 id="narration-title">Explained</h3>
+                <div class="depth" role="radiogroup" aria-label="Explanation depth">
+                  <button type="button" role="radio" data-depth="curious" aria-checked="false">Curious</button>
+                  <button type="button" role="radio" data-depth="student" aria-checked="true">Student</button>
+                  <button type="button" role="radio" data-depth="expert" aria-checked="false">Expert</button>
+                </div>
+              </div>
+              <div id="turnstile-box" class="turnstile-box" hidden>
+                <p>One quick check before we write a fresh explanation for this protein.</p>
+                <div id="turnstile-widget"></div>
+              </div>
+              <div id="narration" class="narration prose" data-state="idle" aria-live="polite" aria-busy="false"></div>
+            </section>
+
+            <section aria-labelledby="function-title" class="card">
+              <h3 id="function-title">Function <span class="src-tag">UniProt</span></h3>
+              <p id="function-text" class="prose"></p>
+            </section>
+
+            <section aria-labelledby="disease-title" class="card" id="disease-card" hidden>
+              <h3 id="disease-title">Disease annotations <span class="src-tag">UniProt</span></h3>
+              <p class="hint">Database annotations, not medical information.</p>
+              <ul id="disease-list" class="plain-list"></ul>
+            </section>
+
+            <section aria-labelledby="pubs-title" class="card" id="pubs-card" hidden>
+              <h3 id="pubs-title">Representative publications <span class="src-tag">PubMed</span></h3>
+              <ul id="pubs-list" class="plain-list"></ul>
+            </section>
+
+            <section aria-labelledby="sources-title" class="card">
+              <h3 id="sources-title">Sources</h3>
+              <ul id="sources-list" class="sources"></ul>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p class="disclaimer">
+        Explanations are AI-generated from the linked database records. For research and education — not medical advice.
+      </p>
+      <p class="credits">
+        Data from <a href="https://www.uniprot.org/">UniProt</a>,
+        <a href="https://alphafold.ebi.ac.uk/">AlphaFold DB</a> (EMBL-EBI &amp; Google DeepMind),
+        <a href="https://www.ebi.ac.uk/interpro/">InterPro</a>, and
+        <a href="https://pubmed.ncbi.nlm.nih.gov/">NCBI PubMed</a>. Structures rendered with
+        <a href="https://molstar.org/">Mol*</a>.
+        <a href="https://github.com/jose-troche/foldspeak">Source on GitHub</a>.
+      </p>
+    </footer>
+  </body>
+</html>
