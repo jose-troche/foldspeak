@@ -1,0 +1,457 @@
+{
+  "accession": "P04637",
+  "entryName": "P53_HUMAN",
+  "proteinName": "Cellular tumor antigen p53",
+  "gene": "TP53",
+  "organism": {
+    "scientificName": "Homo sapiens",
+    "commonName": "Human",
+    "taxId": 9606
+  },
+  "length": 393,
+  "sequence": "MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD",
+  "function": "Multifunctional transcription factor that induces cell cycle arrest, DNA repair or apoptosis upon binding to its target DNA sequence. Acts as a tumor suppressor in many tumor types; induces growth arrest or apoptosis depending on the physiological circumstances and cell type. Negatively regulates cell division by controlling expression of a set of genes required for this process. One of the activated genes is an inhibitor of cyclin-dependent kinases. Apoptosis induction seems to be mediated either by stimulation of BAX and FAS antigen expression, or by repression of Bcl-2 expression. Its pro-apoptotic activity is activated via its interaction with PPP1R13B/ASPP1 or TP53BP2/ASPP2. However, this activity is inhibited when the interaction with PPP1R13B/ASPP1 or TP53BP2/ASPP2 is displaced by PPP1R13L/iASPP. In cooperation with mitochondrial PPIF is involved in activating oxidative stress-induced necrosis; the function is largely independent of transcription. Induces the transcription of long intergenic non-coding RNA p21 (lincRNA-p21) and lincRNA-Mkln1. LincRNA-p21 participates in TP53-dependent transcriptional repression leading to apoptosis and seems to have an effect on cell-cycle regulation. Implicated in Notch signaling cross-over. Prevents CDK7 kinase activity when associated to CAK complex in response to DNA damage, thus stopping cell cycle progression. Isoform 2 enhances the transactivation activity of isoform 1 from some but not all TP53-inducible promoters. Isoform 4 suppresses transactivation activity and impairs growth suppression mediated by isoform 1. Isoform 7 inhibits isoform 1-mediated apoptosis. Regulates the circadian clock by repressing CLOCK-BMAL1-mediated transcriptional activation of PER2.",
+  "diseases": [
+    {
+      "name": "Esophageal cancer (ESCR)",
+      "description": "A malignancy of the esophagus. The most common types are esophageal squamous cell carcinoma and adenocarcinoma. Cancer of the esophagus remains a devastating disease because it is usually not detected until it has progressed to an advanced incurable stage."
+    },
+    {
+      "name": "Li-Fraumeni syndrome (LFS)",
+      "description": "An autosomal dominant familial cancer syndrome that in its classic form is defined by the existence of a proband affected by a sarcoma before 45 years with a first degree relative affected by any tumor before 45 years and another first degree relative with any tumor before 45…"
+    },
+    {
+      "name": "Squamous cell carcinoma of the head and neck (HNSCC)",
+      "description": "A non-melanoma skin cancer affecting the head and neck. The hallmark of cutaneous SCC is malignant transformation of normal epidermal keratinocytes."
+    },
+    {
+      "name": "Lung cancer (LNCR)",
+      "description": "A common malignancy affecting tissues of the lung. The most common form of lung cancer is non-small cell lung cancer (NSCLC) that can be divided into 3 major histologic subtypes: squamous cell carcinoma, adenocarcinoma, and large cell lung cancer. NSCLC is often diagnosed at an…"
+    },
+    {
+      "name": "Papilloma of choroid plexus (CPP)",
+      "description": "A benign tumor of neuroectodermal origin that generally occurs in childhood, but has also been reported in adults. Although generally found within the ventricular system, choroid plexus papillomas can arise ectopically in the brain parenchyma or disseminate throughout the…"
+    },
+    {
+      "name": "Adrenocortical carcinoma (ADCC)",
+      "description": "A malignant neoplasm of the adrenal cortex and a rare childhood tumor. It occurs with increased frequency in patients with Beckwith-Wiedemann syndrome and Li-Fraumeni syndrome."
+    },
+    {
+      "name": "Basal cell carcinoma 7 (BCC7)",
+      "description": "A common malignant skin neoplasm that typically appears on hair-bearing skin, most commonly on sun-exposed areas. It is slow growing and rarely metastasizes, but has potentialities for local invasion and destruction. It usually develops as a flat, firm, pale area that is small,…"
+    },
+    {
+      "name": "Bone marrow failure syndrome 5 (BMFS5)",
+      "description": "A form of bone marrow failure syndrome, a heterogeneous group of life-threatening disorders characterized by hematopoietic defects in association with a range of variable extra-hematopoietic manifestations. BMFS5 is an autosomal dominant form characterized by infantile onset of…"
+    }
+  ],
+  "features": [
+    {
+      "type": "region",
+      "start": 1,
+      "end": 320,
+      "description": "Interaction with CCAR2"
+    },
+    {
+      "type": "region",
+      "start": 1,
+      "end": 83,
+      "description": "Interaction with HRMT1L2"
+    },
+    {
+      "type": "region",
+      "start": 1,
+      "end": 44,
+      "description": "Transcription activation (acidic)"
+    },
+    {
+      "type": "modified residue",
+      "start": 9,
+      "end": 9,
+      "description": "Phosphoserine; by HIPK4"
+    },
+    {
+      "type": "modified residue",
+      "start": 15,
+      "end": 15,
+      "description": "Phosphoserine; by CDK5, PRPK, AMPK, NUAK1 and ATM"
+    },
+    {
+      "type": "motif",
+      "start": 17,
+      "end": 25,
+      "description": "TADI"
+    },
+    {
+      "type": "modified residue",
+      "start": 18,
+      "end": 18,
+      "description": "Phosphothreonine; by CK1, VRK1 and VRK2"
+    },
+    {
+      "type": "modified residue",
+      "start": 20,
+      "end": 20,
+      "description": "Phosphoserine; by CHEK2, CK1 and PLK3"
+    },
+    {
+      "type": "cross-link",
+      "start": 24,
+      "end": 24,
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "modified residue",
+      "start": 33,
+      "end": 33,
+      "description": "Phosphoserine; by CDK5 and CDK7"
+    },
+    {
+      "type": "modified residue",
+      "start": 37,
+      "end": 37,
+      "description": "Phosphoserine; by MAPKAPK5"
+    },
+    {
+      "type": "modified residue",
+      "start": 46,
+      "end": 46,
+      "description": "Phosphoserine; by CDK5, DYRK2, HIPK2 and PKC/PRKCG"
+    },
+    {
+      "type": "motif",
+      "start": 48,
+      "end": 56,
+      "description": "TADII"
+    },
+    {
+      "type": "region",
+      "start": 50,
+      "end": 96,
+      "description": "Disordered"
+    },
+    {
+      "type": "modified residue",
+      "start": 55,
+      "end": 55,
+      "description": "Phosphothreonine; by TAF1 and GRK5"
+    },
+    {
+      "type": "region",
+      "start": 66,
+      "end": 110,
+      "description": "Interaction with WWOX"
+    },
+    {
+      "type": "region",
+      "start": 100,
+      "end": 370,
+      "description": "Interaction with HIPK1"
+    },
+    {
+      "type": "region",
+      "start": 100,
+      "end": 300,
+      "description": "Required for interaction with ZNF385A"
+    },
+    {
+      "type": "DNA binding",
+      "start": 102,
+      "end": 292,
+      "description": "DNA binding"
+    },
+    {
+      "type": "region",
+      "start": 113,
+      "end": 236,
+      "description": "Required for interaction with FBXO42"
+    },
+    {
+      "type": "region",
+      "start": 116,
+      "end": 292,
+      "description": "Interaction with AXIN1"
+    },
+    {
+      "type": "site",
+      "start": 120,
+      "end": 120,
+      "description": "Interaction with DNA"
+    },
+    {
+      "type": "modified residue",
+      "start": 120,
+      "end": 120,
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "start": 120,
+      "end": 120,
+      "description": "N6-lactoyllysine"
+    },
+    {
+      "type": "modified residue",
+      "start": 139,
+      "end": 139,
+      "description": "N6-lactoyllysine"
+    },
+    {
+      "type": "binding site",
+      "start": 176,
+      "end": 176,
+      "description": "Zn(2+)"
+    },
+    {
+      "type": "binding site",
+      "start": 179,
+      "end": 179,
+      "description": "Zn(2+)"
+    },
+    {
+      "type": "modified residue",
+      "start": 183,
+      "end": 183,
+      "description": "Phosphoserine; by AURKB"
+    },
+    {
+      "type": "binding site",
+      "start": 238,
+      "end": 238,
+      "description": "Zn(2+)"
+    },
+    {
+      "type": "region",
+      "start": 241,
+      "end": 248,
+      "description": "Interaction with the 53BP2 SH3 domain"
+    },
+    {
+      "type": "binding site",
+      "start": 242,
+      "end": 242,
+      "description": "Zn(2+)"
+    },
+    {
+      "type": "region",
+      "start": 256,
+      "end": 294,
+      "description": "Interaction with E4F1"
+    },
+    {
+      "type": "region",
+      "start": 273,
+      "end": 280,
+      "description": "Interaction with DNA"
+    },
+    {
+      "type": "region",
+      "start": 282,
+      "end": 325,
+      "description": "Disordered"
+    },
+    {
+      "type": "cross-link",
+      "start": 291,
+      "end": 291,
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "start": 292,
+      "end": 292,
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "region",
+      "start": 300,
+      "end": 393,
+      "description": "Interaction with CARM1"
+    },
+    {
+      "type": "motif",
+      "start": 305,
+      "end": 321,
+      "description": "Bipartite nuclear localization signal"
+    },
+    {
+      "type": "region",
+      "start": 319,
+      "end": 360,
+      "description": "Interaction with HIPK2"
+    },
+    {
+      "type": "region",
+      "start": 325,
+      "end": 356,
+      "description": "Oligomerization"
+    },
+    {
+      "type": "motif",
+      "start": 339,
+      "end": 350,
+      "description": "Nuclear export signal"
+    },
+    {
+      "type": "region",
+      "start": 351,
+      "end": 393,
+      "description": "Disordered"
+    },
+    {
+      "type": "cross-link",
+      "start": 351,
+      "end": 351,
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "start": 357,
+      "end": 357,
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "region",
+      "start": 359,
+      "end": 363,
+      "description": "Interaction with USP7"
+    },
+    {
+      "type": "region",
+      "start": 368,
+      "end": 387,
+      "description": "Basic (repression of DNA-binding)"
+    },
+    {
+      "type": "motif",
+      "start": 370,
+      "end": 372,
+      "description": "[KR]-[STA]-K motif"
+    },
+    {
+      "type": "region",
+      "start": 374,
+      "end": 393,
+      "description": "Interaction with MORN3"
+    },
+    {
+      "type": "cross-link",
+      "start": 386,
+      "end": 386,
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in SUMO)"
+    }
+  ],
+  "domains": [
+    {
+      "source": "InterPro",
+      "id": "IPR002117",
+      "name": "p53 tumour suppressor family",
+      "type": "family",
+      "start": 3,
+      "end": 369
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR013872",
+      "name": "p53, transactivation domain",
+      "type": "domain",
+      "start": 6,
+      "end": 30
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR040926",
+      "name": "Cellular tumor antigen p53, transactivation domain 2",
+      "type": "domain",
+      "start": 35,
+      "end": 59
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR011615",
+      "name": "p53, DNA-binding domain",
+      "type": "domain",
+      "start": 100,
+      "end": 288
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR057064",
+      "name": "p53, central conserved site",
+      "type": "conserved site",
+      "start": 237,
+      "end": 249
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR010991",
+      "name": "p53, tetramerisation domain",
+      "type": "domain",
+      "start": 319,
+      "end": 357
+    }
+  ],
+  "structure": {
+    "available": true,
+    "cifUrl": "https://alphafold.ebi.ac.uk/files/AF-P04637-F1-model_v6.cif",
+    "pageUrl": "https://alphafold.ebi.ac.uk/entry/P04637",
+    "paeImageUrl": "https://alphafold.ebi.ac.uk/files/AF-P04637-F1-predicted_aligned_error_v6.png",
+    "meanPlddt": 75.1,
+    "modelVersion": 6
+  },
+  "publications": [
+    {
+      "pmid": "16793544",
+      "title": "Structural basis of DNA recognition by p53 tetramers.",
+      "year": 2006,
+      "journal": "Mol Cell"
+    },
+    {
+      "pmid": "20364130",
+      "title": "Diversity in DNA recognition by p53 revealed by crystal structures with Hoogsteen base pairs.",
+      "year": 2010,
+      "journal": "Nat Struct Mol Biol"
+    },
+    {
+      "pmid": "20959462",
+      "title": "Aurora B interacts with NIR-p53, leading to p53 phosphorylation in its DNA-binding domain and subsequent functional suppression.",
+      "year": 2011,
+      "journal": "J Biol Chem"
+    },
+    {
+      "pmid": "15186775",
+      "title": "Ordered cooperative functions of PRMT1, p300, and CARM1 in transcriptional activation by p53.",
+      "year": 2004,
+      "journal": "Cell"
+    },
+    {
+      "pmid": "38653238",
+      "title": "Alanyl-tRNA synthetase, AARS1, is a lactate sensor and lactyltransferase that lactylates p53 and contributes to tumorigenesis.",
+      "year": 2024,
+      "journal": "Cell"
+    }
+  ],
+  "sources": [
+    {
+      "name": "UniProt",
+      "url": "https://www.uniprot.org/uniprotkb/P04637/entry",
+      "retrieved": "2026-11-07T00:00:00.000Z"
+    },
+    {
+      "name": "AlphaFold DB",
+      "url": "https://alphafold.ebi.ac.uk/entry/P04637",
+      "retrieved": "2026-11-07T00:00:00.000Z"
+    },
+    {
+      "name": "InterPro",
+      "url": "https://www.ebi.ac.uk/interpro/protein/UniProt/P04637/",
+      "retrieved": "2026-11-07T00:00:00.000Z"
+    },
+    {
+      "name": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=16793544%20OR%2020364130%20OR%2020959462%20OR%2015186775%20OR%2038653238",
+      "retrieved": "2026-11-07T00:00:00.000Z"
+    }
+  ],
+  "cached": false
+}

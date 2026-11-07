@@ -1,0 +1,166 @@
+{
+  "accession": "P42212",
+  "entryName": "GFP_AEQVI",
+  "proteinName": "Green fluorescent protein",
+  "gene": "GFP",
+  "organism": {
+    "scientificName": "Aequorea victoria",
+    "commonName": "Water jellyfish",
+    "taxId": 6100
+  },
+  "length": 238,
+  "sequence": "MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK",
+  "function": "Energy-transfer acceptor. Its role is to transduce the blue chemiluminescence of the protein aequorin into green fluorescent light by energy transfer. Fluoresces in vivo upon receiving energy from the Ca(2+)-activated photoprotein aequorin.",
+  "diseases": [],
+  "features": [
+    {
+      "type": "cross-link",
+      "start": 65,
+      "end": 67,
+      "description": "5-imidazolinone (Ser-Gly)"
+    },
+    {
+      "type": "modified residue",
+      "start": 66,
+      "end": 66,
+      "description": "(Z)-2,3-didehydrotyrosine"
+    }
+  ],
+  "domains": [
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 3,
+      "end": 27
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR011584",
+      "name": "Green fluorescent protein-related",
+      "type": "family",
+      "start": 13,
+      "end": 227
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 28,
+      "end": 48
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 49,
+      "end": 69
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 70,
+      "end": 85
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 86,
+      "end": 108
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 109,
+      "end": 129
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 130,
+      "end": 149
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 150,
+      "end": 171
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 173,
+      "end": 192
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 193,
+      "end": 211
+    },
+    {
+      "source": "InterPro",
+      "id": "IPR000786",
+      "name": "Green fluorescent protein, GFP",
+      "type": "family",
+      "start": 214,
+      "end": 237
+    }
+  ],
+  "structure": {
+    "available": true,
+    "cifUrl": "https://alphafold.ebi.ac.uk/files/AF-P42212-F1-model_v6.cif",
+    "pageUrl": "https://alphafold.ebi.ac.uk/entry/P42212",
+    "paeImageUrl": "https://alphafold.ebi.ac.uk/files/AF-P42212-F1-predicted_aligned_error_v6.png",
+    "meanPlddt": 96.6,
+    "modelVersion": 6
+  },
+  "publications": [
+    {
+      "pmid": "8448132",
+      "title": "Chemical structure of the hexapeptide chromophore of the Aequorea green-fluorescent protein.",
+      "year": 1993,
+      "journal": "Biochemistry"
+    }
+  ],
+  "sources": [
+    {
+      "name": "UniProt",
+      "url": "https://www.uniprot.org/uniprotkb/P42212/entry",
+      "retrieved": "2026-11-07T00:00:00.000Z"
+    },
+    {
+      "name": "AlphaFold DB",
+      "url": "https://alphafold.ebi.ac.uk/entry/P42212",
+      "retrieved": "2026-11-07T00:00:00.000Z"
+    },
+    {
+      "name": "InterPro",
+      "url": "https://www.ebi.ac.uk/interpro/protein/UniProt/P42212/",
+      "retrieved": "2026-11-07T00:00:00.000Z"
+    },
+    {
+      "name": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=8448132",
+      "retrieved": "2026-11-07T00:00:00.000Z"
+    }
+  ],
+  "cached": false
+}
