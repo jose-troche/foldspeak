@@ -79,6 +79,18 @@ describe("dossier assembly against recorded fixtures", () => {
     }
   });
 
+  it("merges an InterPro family's motif hits into one span, but keeps repeated domains separate", async () => {
+    mockUpstreams();
+    const gfp = (await assembleDossier("P42212", testEnv())).dossier;
+    const families = gfp.domains.filter((d) => d.type === "family");
+    expect(new Set(families.map((d) => d.id)).size).toBe(families.length);
+    expect(families.find((d) => d.name === "Green fluorescent protein, GFP")).toMatchObject({ start: 3, end: 237 });
+
+    const titin = (await assembleDossier("Q8WZ42", testEnv())).dossier;
+    const ig = titin.domains.filter((d) => d.type === "domain" && d.name === "Immunoglobulin I-set");
+    expect(ig.length).toBeGreaterThan(1);
+  });
+
   it("titin has no AlphaFold model: NO_STRUCTURE is a normal outcome, not an error", async () => {
     mockUpstreams();
     const { dossier, complete } = await assembleDossier("Q8WZ42", testEnv());
