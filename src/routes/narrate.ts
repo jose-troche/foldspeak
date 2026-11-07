@@ -35,6 +35,33 @@ const TEXT_HEADERS = {
 };
 
 /**
+ * Replay cached text as a paced stream so a cached explanation reads the same way
+ * as a fresh one. Timer waits are not CPU time; ~25ms per chunk adds a few hundred
+ * milliseconds to the whole explanation, while the first words arrive at once.
+ */
+export function replayStream(text: string, chunkChars = 160, delayMs = 25): ReadableStream<Uint8Array> {
+  const encoder = new TextEncoder();
+  let offset = 0;
+  return new ReadableStream<Uint8Array>({
+    async pull(ctrl) {
+      if (offset >= text.length) {
+        ctrl.close();
+        return;
+      }
+      if (offset > 0) await new Promise((r) => setTimeout(r, delayMs));
+      // Break on whitespace so words are never split across chunks.
+      let end = Math.min(text.length, offset + chunkChars);
+      if (end < text.length) {
+        const space = text.lastIndexOf(" ", end);
+        if (space > offset) end = space + 1;
+      }
+      ctrl.enqueue(encoder.encode(text.slice(offset, end)));
+      offset = end;
+    },
+  });
+}
+
+/**
  * Order matters and is the point of this handler:
  *   rate limit (middleware) → narration cache → Turnstile → dossier → budget → model.
  * Cached narrations are never gated, so repeat visitors never see a challenge, and
@@ -57,7 +84,7 @@ narrate.post("/", async (c) => {
   // 1. Cache hit: stream cached text, no Turnstile, no model call.
   const cached = await cacheGet<CachedNarration>(c.env.NARRATION_CACHE, key);
   if (cached?.text) {
-    return new Response(cached.text, { headers: { ...TEXT_HEADERS, "X-Narration-Cache": "HIT" } });
+    return new Response(replayStream(cached.text), { headers: { ...TEXT_HEADERS, "X-Narration-Cache": "HIT" } });
   }
 
   // 2. Cache miss: this request will cost a model call, so it must pass Turnstile.

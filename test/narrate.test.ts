@@ -173,3 +173,21 @@ describe("neuron circuit breaker", () => {
     expect(ai.run).not.toHaveBeenCalled();
   });
 });
+
+describe("cached replay stream", () => {
+  it("replays text in whitespace-aligned chunks and reassembles exactly", async () => {
+    const { replayStream } = await import("../src/routes/narrate");
+    const text = "word ".repeat(100).trim();
+    const reader = replayStream(text, 40, 0).getReader();
+    const dec = new TextDecoder();
+    const chunks: string[] = [];
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      chunks.push(dec.decode(value));
+    }
+    expect(chunks.length).toBeGreaterThan(5);
+    expect(chunks.join("")).toBe(text);
+    expect(chunks.slice(0, -1).every((c) => c.endsWith(" "))).toBe(true);
+  });
+});
