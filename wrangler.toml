@@ -1,0 +1,59 @@
+name = "foldspeak"
+main = "src/index.ts"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+# The frontend is plain TypeScript bundled by esbuild into public/app.js.
+# Wrangler runs this before `wrangler dev` and `wrangler deploy`. Only src/ is watched:
+# watching public/ would loop on the build's own output. `npm run dev` runs esbuild's
+# watcher for the frontend alongside.
+[build]
+command = "npm run build:web"
+watch_dir = "src"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+# Workers AI always runs remotely, even under `wrangler dev`.
+[ai]
+binding = "AI"
+remote = true
+
+[[kv_namespaces]]
+binding = "PROTEIN_CACHE"
+id = "1477046a7f3a40e3853db7d0b4950e46"
+
+[[kv_namespaces]]
+binding = "NARRATION_CACHE"
+id = "d3184677259d41478c6286f24166e883"
+
+[[ratelimits]]
+name = "BROWSE_LIMITER"
+namespace_id = "1001"
+  [ratelimits.simple]
+  limit = 60
+  period = 60
+
+[[ratelimits]]
+name = "NARRATE_LIMITER"
+namespace_id = "1002"
+  [ratelimits.simple]
+  limit = 6
+  period = 60
+
+[[durable_objects.bindings]]
+name = "NEURON_COUNTER"
+class_name = "NeuronCounter"
+
+# new_sqlite_classes is required: key-value-backed Durable Objects need the Paid plan.
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["NeuronCounter"]
+
+[vars]
+AI_MODEL = "@cf/meta/llama-3.2-3b-instruct"
+NEURON_DAILY_BUDGET = "8000"
+USER_AGENT = "foldspeak/1.0 (https://github.com/jose-troche/foldspeak)"
+TURNSTILE_SITE_KEY = "1x00000000000000000000AA"

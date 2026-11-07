@@ -1,0 +1,15 @@
+node_modules/
+.wrangler/
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.env
+public/app.js
+public/app.js.map
+dist/
+test-results/
+playwright-report/
+blob-report/
+.seed/
+*.log
+.DS_Store

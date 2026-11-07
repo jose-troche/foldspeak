@@ -1,0 +1,33 @@
+{
+  "name": "foldspeak",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An AI guide to any protein on Earth — structure, function, and what breaks it, in plain English.",
+  "type": "module",
+  "scripts": {
+    "build:web": "esbuild public/app.ts --bundle --format=esm --target=es2022 --outfile=public/app.js",
+    "dev": "npm run build:web -- --watch=forever & wrangler dev",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p public && tsc --noEmit -p e2e",
+    "test": "vitest run",
+    "e2e:seed": "tsx e2e/seed-local.ts",
+    "e2e": "playwright test",
+    "seed": "tsx scripts/seed-proteins.ts",
+    "deploy": "npm run typecheck && npm run test && npm run e2e && wrangler deploy"
+  },
+  "dependencies": {
+    "hono": "^4.13.17",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "^1.6.0",
+    "@cloudflare/workers-types": "^5.20261107.1",
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "molstar": "5.13.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0",
+    "wrangler": "^4.158.0"
+  }
+}

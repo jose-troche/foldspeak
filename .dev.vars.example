@@ -1,0 +1,7 @@
+# Copy to .dev.vars for `wrangler dev`. These are Cloudflare's published Turnstile test keys.
+# Site key 1x00000000000000000000AA / secret 1x0000000000000000000000000000000AA always pass;
+# the 2x... variants always fail.
+TURNSTILE_SITE_KEY=1x00000000000000000000AA
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+# Optional: a free NCBI key raises E-utilities limits from 3 to 10 requests/second.
+NCBI_API_KEY=
