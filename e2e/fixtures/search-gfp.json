@@ -1,0 +1,7 @@
+{
+  "results": [
+    { "accession": "P42212", "name": "Green fluorescent protein", "gene": "GFP", "organism": "Aequorea victoria", "reviewed": true, "length": 238 },
+    { "accession": "Q9U6Y4", "name": "GFP-like fluorescent chromoprotein FP538", "gene": null, "organism": "Zoanthus sp.", "reviewed": true, "length": 231 },
+    { "accession": "A0A076FL24", "name": "Green fluorescent protein", "gene": "gfp", "organism": "Aequorea macrodactyla", "reviewed": false, "length": 238 }
+  ]
+}
