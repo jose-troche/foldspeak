@@ -56,4 +56,5 @@ new_sqlite_classes = ["NeuronCounter"]
 AI_MODEL = "@cf/meta/llama-3.2-3b-instruct"
 NEURON_DAILY_BUDGET = "8000"
 USER_AGENT = "foldspeak/1.0 (https://github.com/jose-troche/foldspeak)"
-TURNSTILE_SITE_KEY = "1x00000000000000000000AA"
+# Public by design. Local dev and e2e override it with the Turnstile test key (.dev.vars, --var).
+TURNSTILE_SITE_KEY = "0x4AAAAAAF4JzuOwqabMsbl2"
