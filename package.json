@@ -7,7 +7,7 @@
   "scripts": {
     "build:web": "esbuild public/app.ts --bundle --format=esm --target=es2022 --outfile=public/app.js",
     "dev": "npm run build:web -- --watch=forever & wrangler dev",
-    "typecheck": "tsc --noEmit && tsc --noEmit -p public && tsc --noEmit -p e2e",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p public && tsc --noEmit -p e2e && tsc --noEmit -p scripts",
     "test": "vitest run",
     "e2e:seed": "tsx e2e/seed-local.ts",
     "e2e": "playwright test",

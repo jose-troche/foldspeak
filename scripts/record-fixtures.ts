@@ -8,11 +8,13 @@
  * structure + PAE image the browser fetches (served by page.route in e2e).
  */
 import { mkdir, writeFile } from "node:fs/promises";
+import { join } from "node:path";
 import { assembleDossier } from "../src/dossier/assemble";
 import type { Env } from "../src/env";
 
 const ACCESSIONS = ["P42212", "P04637", "Q8WZ42"];
-const ROOT = new URL("../test/fixtures/", import.meta.url);
+// String paths (not file URLs): Node and Workers type definitions disagree on URL.
+const ROOT = "test/fixtures";
 const USER_AGENT = "foldspeak/1.0 (https://github.com/jose-troche/foldspeak)";
 
 function fixtureName(url: string): string | null {
@@ -32,21 +34,21 @@ globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
   const name = fixtureName(url);
   if (name) {
     const body = res.status === 200 ? await res.clone().text() : JSON.stringify({ __status: res.status });
-    await writeFile(new URL(`upstream/${name}`, ROOT), body.endsWith("\n") ? body : `${body}\n`);
+    await writeFile(join(ROOT, "upstream", name), body.endsWith("\n") ? body : `${body}\n`);
   }
   return res;
 };
 
 const env = { USER_AGENT, NCBI_API_KEY: process.env.NCBI_API_KEY ?? "" } as Env;
 
-await mkdir(new URL("upstream/", ROOT), { recursive: true });
-await mkdir(new URL("dossiers/", ROOT), { recursive: true });
-await mkdir(new URL("structures/", ROOT), { recursive: true });
+await mkdir(join(ROOT, "upstream"), { recursive: true });
+await mkdir(join(ROOT, "dossiers"), { recursive: true });
+await mkdir(join(ROOT, "structures"), { recursive: true });
 
 for (const acc of ACCESSIONS) {
   current = acc;
   const { dossier, complete } = await assembleDossier(acc, env, new Date("2026-11-07T00:00:00Z"));
-  await writeFile(new URL(`dossiers/${acc}.json`, ROOT), `${JSON.stringify(dossier, null, 2)}\n`);
+  await writeFile(join(ROOT, "dossiers", `${acc}.json`), `${JSON.stringify(dossier, null, 2)}\n`);
   console.log(acc, dossier.proteinName, complete ? "complete" : "PARTIAL");
 }
 
@@ -58,6 +60,6 @@ for (const [url, file] of [
   [gfp.structure.paeImageUrl, "structures/P42212-pae.png"],
 ] as const) {
   const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
-  await writeFile(new URL(file, ROOT), Buffer.from(await res.arrayBuffer()));
+  await writeFile(join(ROOT, file), Buffer.from(await res.arrayBuffer()));
   console.log("saved", file);
 }
