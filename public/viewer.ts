@@ -131,8 +131,8 @@ export class StructureViewer {
       img.src = structure.paeImageUrl;
       img.alt = `AlphaFold predicted aligned error plot for ${label}`;
       img.loading = "lazy";
-      img.width = 320;
-      img.height = 320;
+      img.width = 200;
+      img.height = 200;
       const cap = document.createElement("p");
       cap.className = "hint";
       cap.textContent =

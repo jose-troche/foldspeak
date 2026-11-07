@@ -504,10 +504,17 @@ main {
 
 .viewer-fallback-img {
   width: 100%;
-  max-width: 320px;
+  max-width: 200px;
   height: auto;
   border-radius: 8px;
   background: #fff;
+}
+
+/* The confidence legend only describes the 3D model. */
+.viewer[data-state="fallback"] + .plddt-legend,
+.viewer[data-state="none"] + .plddt-legend,
+.viewer[data-state="error"] + .plddt-legend {
+  display: none;
 }
 
 .plddt-legend {

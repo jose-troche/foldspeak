@@ -299,9 +299,11 @@ function renderRegions(d: Dossier): void {
     source: "UniProt",
   }));
 
-  // Linear map of the protein with InterPro domains (or UniProt domains as a fallback).
-  const trackItems = domains.filter((x) => x.type === "domain" || x.type === "repeat");
-  const onTrack = trackItems.length ? trackItems : features.filter((f) => f.type === "domain");
+  // Linear map of the protein: InterPro domains, else UniProt domains, else InterPro families.
+  const pick = (items: Region[], types: string[]) => items.filter((x) => types.includes(x.type));
+  const onTrack = [pick(domains, ["domain", "repeat"]), pick(features, ["domain"]), pick(domains, ["family"])].find(
+    (list) => list.length > 0,
+  ) ?? [];
   els.track.replaceChildren(
     ...onTrack.map((r) => {
       const seg = h("span", { class: "track-seg", "data-range": `${r.start}-${r.end}` });
