@@ -1,0 +1,405 @@
+{
+  "description": "The 100 showcase proteins: pre-seeded at deploy time and the only pool 'Surprise me' draws from. Chosen for recognizability, not biological importance.",
+  "proteins": [
+    {
+      "accession": "P42212",
+      "label": "GFP"
+    },
+    {
+      "accession": "P04637",
+      "label": "p53"
+    },
+    {
+      "accession": "P69905",
+      "label": "Hemoglobin alpha"
+    },
+    {
+      "accession": "P68871",
+      "label": "Hemoglobin beta"
+    },
+    {
+      "accession": "P01308",
+      "label": "Insulin"
+    },
+    {
+      "accession": "P0DTC2",
+      "label": "SARS-CoV-2 spike"
+    },
+    {
+      "accession": "P13569",
+      "label": "CFTR"
+    },
+    {
+      "accession": "P38398",
+      "label": "BRCA1"
+    },
+    {
+      "accession": "P11532",
+      "label": "Dystrophin"
+    },
+    {
+      "accession": "P02452",
+      "label": "Collagen I alpha-1"
+    },
+    {
+      "accession": "P02144",
+      "label": "Myoglobin"
+    },
+    {
+      "accession": "P61626",
+      "label": "Lysozyme (human)"
+    },
+    {
+      "accession": "P0CG48",
+      "label": "Ubiquitin"
+    },
+    {
+      "accession": "P60709",
+      "label": "Actin"
+    },
+    {
+      "accession": "P68363",
+      "label": "Tubulin alpha"
+    },
+    {
+      "accession": "Q8WZ42",
+      "label": "Titin"
+    },
+    {
+      "accession": "P0DUB6",
+      "label": "Salivary amylase"
+    },
+    {
+      "accession": "P00791",
+      "label": "Pepsin"
+    },
+    {
+      "accession": "P08100",
+      "label": "Rhodopsin"
+    },
+    {
+      "accession": "P04264",
+      "label": "Keratin 1"
+    },
+    {
+      "accession": "P02768",
+      "label": "Serum albumin"
+    },
+    {
+      "accession": "P00533",
+      "label": "EGFR"
+    },
+    {
+      "accession": "P04626",
+      "label": "HER2"
+    },
+    {
+      "accession": "P01116",
+      "label": "KRas"
+    },
+    {
+      "accession": "P01112",
+      "label": "HRas"
+    },
+    {
+      "accession": "P15056",
+      "label": "BRAF"
+    },
+    {
+      "accession": "P42336",
+      "label": "PI3K alpha"
+    },
+    {
+      "accession": "P60484",
+      "label": "PTEN"
+    },
+    {
+      "accession": "P06400",
+      "label": "Retinoblastoma protein"
+    },
+    {
+      "accession": "P31749",
+      "label": "AKT1"
+    },
+    {
+      "accession": "P42345",
+      "label": "mTOR"
+    },
+    {
+      "accession": "P28482",
+      "label": "ERK2"
+    },
+    {
+      "accession": "P00519",
+      "label": "ABL1"
+    },
+    {
+      "accession": "P06213",
+      "label": "Insulin receptor"
+    },
+    {
+      "accession": "P01241",
+      "label": "Growth hormone"
+    },
+    {
+      "accession": "P41159",
+      "label": "Leptin"
+    },
+    {
+      "accession": "P01588",
+      "label": "Erythropoietin"
+    },
+    {
+      "accession": "P01275",
+      "label": "Glucagon"
+    },
+    {
+      "accession": "P10275",
+      "label": "Androgen receptor"
+    },
+    {
+      "accession": "P03372",
+      "label": "Estrogen receptor alpha"
+    },
+    {
+      "accession": "P05067",
+      "label": "Amyloid precursor protein"
+    },
+    {
+      "accession": "P10636",
+      "label": "Tau"
+    },
+    {
+      "accession": "P37840",
+      "label": "Alpha-synuclein"
+    },
+    {
+      "accession": "P42858",
+      "label": "Huntingtin"
+    },
+    {
+      "accession": "P04156",
+      "label": "Prion protein"
+    },
+    {
+      "accession": "P00441",
+      "label": "SOD1"
+    },
+    {
+      "accession": "Q5S007",
+      "label": "LRRK2"
+    },
+    {
+      "accession": "O60260",
+      "label": "Parkin"
+    },
+    {
+      "accession": "Q16637",
+      "label": "SMN1"
+    },
+    {
+      "accession": "P51608",
+      "label": "MeCP2"
+    },
+    {
+      "accession": "Q06787",
+      "label": "FMRP"
+    },
+    {
+      "accession": "P01009",
+      "label": "Alpha-1-antitrypsin"
+    },
+    {
+      "accession": "P00734",
+      "label": "Prothrombin"
+    },
+    {
+      "accession": "P02671",
+      "label": "Fibrinogen alpha"
+    },
+    {
+      "accession": "P00451",
+      "label": "Factor VIII"
+    },
+    {
+      "accession": "P00740",
+      "label": "Factor IX"
+    },
+    {
+      "accession": "P04275",
+      "label": "von Willebrand factor"
+    },
+    {
+      "accession": "P12821",
+      "label": "ACE"
+    },
+    {
+      "accession": "Q9BYF1",
+      "label": "ACE2"
+    },
+    {
+      "accession": "P35354",
+      "label": "COX-2"
+    },
+    {
+      "accession": "P23219",
+      "label": "COX-1"
+    },
+    {
+      "accession": "P08183",
+      "label": "P-glycoprotein"
+    },
+    {
+      "accession": "P05023",
+      "label": "Sodium/potassium pump"
+    },
+    {
+      "accession": "P00918",
+      "label": "Carbonic anhydrase II"
+    },
+    {
+      "accession": "P04406",
+      "label": "GAPDH"
+    },
+    {
+      "accession": "P00439",
+      "label": "Phenylalanine hydroxylase"
+    },
+    {
+      "accession": "P09848",
+      "label": "Lactase"
+    },
+    {
+      "accession": "P04040",
+      "label": "Catalase"
+    },
+    {
+      "accession": "P99999",
+      "label": "Cytochrome c"
+    },
+    {
+      "accession": "P07900",
+      "label": "HSP90"
+    },
+    {
+      "accession": "P0DMV8",
+      "label": "HSP70"
+    },
+    {
+      "accession": "P0DP23",
+      "label": "Calmodulin"
+    },
+    {
+      "accession": "P12883",
+      "label": "Cardiac myosin"
+    },
+    {
+      "accession": "P08670",
+      "label": "Vimentin"
+    },
+    {
+      "accession": "P02545",
+      "label": "Lamin A/C"
+    },
+    {
+      "accession": "P35555",
+      "label": "Fibrillin-1"
+    },
+    {
+      "accession": "P15502",
+      "label": "Elastin"
+    },
+    {
+      "accession": "P02751",
+      "label": "Fibronectin"
+    },
+    {
+      "accession": "P35222",
+      "label": "Beta-catenin"
+    },
+    {
+      "accession": "P01375",
+      "label": "TNF"
+    },
+    {
+      "accession": "P60568",
+      "label": "Interleukin-2"
+    },
+    {
+      "accession": "P05231",
+      "label": "Interleukin-6"
+    },
+    {
+      "accession": "P01579",
+      "label": "Interferon gamma"
+    },
+    {
+      "accession": "Q15116",
+      "label": "PD-1"
+    },
+    {
+      "accession": "Q9NZQ7",
+      "label": "PD-L1"
+    },
+    {
+      "accession": "P16410",
+      "label": "CTLA-4"
+    },
+    {
+      "accession": "P01730",
+      "label": "CD4"
+    },
+    {
+      "accession": "P15692",
+      "label": "VEGF-A"
+    },
+    {
+      "accession": "P01137",
+      "label": "TGF-beta 1"
+    },
+    {
+      "accession": "O14746",
+      "label": "Telomerase (TERT)"
+    },
+    {
+      "accession": "Q99ZW2",
+      "label": "Cas9"
+    },
+    {
+      "accession": "P08659",
+      "label": "Firefly luciferase"
+    },
+    {
+      "accession": "P07164",
+      "label": "Aequorin"
+    },
+    {
+      "accession": "P02945",
+      "label": "Bacteriorhodopsin"
+    },
+    {
+      "accession": "P00720",
+      "label": "T4 lysozyme"
+    },
+    {
+      "accession": "P22629",
+      "label": "Streptavidin"
+    },
+    {
+      "accession": "P03452",
+      "label": "Influenza hemagglutinin"
+    },
+    {
+      "accession": "P04578",
+      "label": "HIV-1 envelope gp160"
+    },
+    {
+      "accession": "P00760",
+      "label": "Trypsin"
+    },
+    {
+      "accession": "P00875",
+      "label": "RuBisCO large chain"
+    }
+  ]
+}
