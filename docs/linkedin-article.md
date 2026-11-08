@@ -1,6 +1,6 @@
 # P04637
 
-### That's science's name for the protein that guards your DNA. This project is about translating codes like that into plain English, using an AI that has to cite every fact.
+### That's the scientific name for the protein that guards your DNA. This project is about translating codes like that into plain English, using an AI that has to cite every fact.
 
 ---
 

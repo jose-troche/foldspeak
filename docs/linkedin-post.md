@@ -1,6 +1,6 @@
 P04637.
 
-That's science's name for the protein that guards your DNA.
+That's the scientific name for the protein that guards your DNA.
 
 It's one of 200 million+ protein shapes predicted by AI, work that shared a Nobel Prize. The results are free for anyone on Earth.
 
