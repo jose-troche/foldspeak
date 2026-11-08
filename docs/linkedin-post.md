@@ -1,6 +1,8 @@
-The most useful AI I've built isn't allowed to know anything.
+P04637.
 
-AI predicted the 3D shapes of 200 million+ proteins. It shared a Nobel Prize. And the results are free for anyone on Earth.
+That's science's name for the protein that guards your DNA.
+
+It's one of 200 million+ protein shapes predicted by AI, work that shared a Nobel Prize. The results are free for anyone on Earth.
 
 Almost nobody can read them.
 
