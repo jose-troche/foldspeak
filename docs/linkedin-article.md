@@ -1,6 +1,6 @@
-# The AI That Isn't Allowed to Know Things
+# P04637
 
-### What I learned building a free guide to every protein on Earth, and why the same idea works far beyond biology
+### That's science's name for the protein that guards your DNA. This is about translating codes like it into plain English, using an AI that has to cite every word.
 
 ---
 
