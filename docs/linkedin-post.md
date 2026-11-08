@@ -24,11 +24,11 @@ That one rule changes everything:
 
 It runs for $0. No login. No ads.
 
-And the idea isn't really about biology. Medical records, contracts, pension statements, tax rules, company manuals: the world is full of knowledge that's public but unreadable.
+And the idea isn't really about biology. It's about medical records, contracts, pension statements, tax rules, company manuals: anywhere knowledge is public but unreadable.
 
 The fix isn't a bigger AI. It's an AI that explains trusted sources and is honest about the gaps.
 
-I wrote up how it works, and how the same principles apply in healthcare, law, finance, education, and more. Link in the first comment 👇
+I wrote up how it works, and how the same principles apply in healthcare, law, finance, education, and more. Link below 👇
 
 What's the "public but unreadable" knowledge in your field?
 
