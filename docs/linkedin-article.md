@@ -39,7 +39,7 @@ You type a protein's name ("insulin," "p53," "spike protein") and within a coupl
 3. **A plain-English explanation** at the level you choose: *Curious* (no science background needed), *Student*, or *Expert*.
 4. **A citation for every claim**, linking back to the scientific record it came from.
 
-It runs entirely for free, for anyone, with no login. You can try it at **foldspeak.troche.workers.dev**.
+It runs entirely for free, for anyone, with no login. You can try it at **https://foldspeak.troche.workers.dev**.
 
 The interesting part isn't the features. It's what the AI is and isn't allowed to do.
 
@@ -141,7 +141,7 @@ The world is full of knowledge that's technically public and practically locked:
 
 foldspeak is one small example, built on decades of publicly funded science from UniProt, EMBL-EBI, Google DeepMind, and the U.S. National Library of Medicine. Those public goods made it possible.
 
-**Try it:** foldspeak.troche.workers.dev. Type a protein you've heard of. Insulin, hemoglobin, and p53 are good places to start.
+**Try it:** https://foldspeak.troche.workers.dev Type a protein you've heard of. Insulin, hemoglobin, and p53 are good places to start.
 
 **Explore the code:** https://github.com/jose-troche/foldspeak
 
