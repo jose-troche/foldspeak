@@ -141,7 +141,9 @@ The world is full of knowledge that's technically public and practically locked:
 
 foldspeak is one small example, built on decades of publicly funded science from UniProt, EMBL-EBI, Google DeepMind, and the U.S. National Library of Medicine. Those public goods made it possible.
 
-**Try it:** https://foldspeak.troche.workers.dev Type a protein you've heard of. Insulin, hemoglobin, and p53 are good places to start.
+**Try it:** https://foldspeak.troche.workers.dev
+
+Type a protein you've heard of. Insulin, hemoglobin, and p53 are good places to start.
 
 **Explore the code:** https://github.com/jose-troche/foldspeak
 
