@@ -143,7 +143,7 @@ foldspeak is one small example, built on decades of publicly funded science from
 
 **Try it:** foldspeak.troche.workers.dev. Type a protein you've heard of. Insulin, hemoglobin, and p53 are good places to start.
 
-**Explore the code:** github.com/jose-troche/foldspeak
+**Explore the code:** https://github.com/jose-troche/foldspeak
 
 And I'd love to hear from you: **in your field, what knowledge is "public but unreadable"?** That's probably where this pattern belongs next.
 
